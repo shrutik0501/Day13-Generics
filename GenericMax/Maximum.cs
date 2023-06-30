@@ -8,7 +8,8 @@ namespace GenericMax
 {
     public class Maximum
     {
-        public double Number(double firstvalue, double secondvalue, double thirdvalue)
+
+        public string Number(string firstvalue, string secondvalue, string thirdvalue)
         {
             //TestCase-1
             if (firstvalue.CompareTo(secondvalue) > 0 && firstvalue.CompareTo(thirdvalue) > 0 ||
@@ -33,5 +34,4 @@ namespace GenericMax
             }
             return firstvalue;
         }
-    }
 }
