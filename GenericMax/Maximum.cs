@@ -6,26 +6,16 @@ using System.Threading.Tasks;
 
 namespace GenericMax
 {
-    public class Maximum<T> where T : IComparable
+    public class Maximum
     {
-        public T firstvalue;
-        public T secondvalue;
-        public T thirdvalue;
-
-        public Maximum(T firstvalue, T secondvalue, T thirdvalue)
-        {
-            this.firstvalue = firstvalue;
-            this.secondvalue = secondvalue;
-            this.thirdvalue = thirdvalue;
-        }
-        public static T Number(T firstvalue, T secondvalue, T thirdvalue)
+        public int Number(int firstvalue, int secondvalue, int thirdvalue)
         {
             //TestCase-1
             if (firstvalue.CompareTo(secondvalue) > 0 && firstvalue.CompareTo(thirdvalue) > 0 ||
             firstvalue.CompareTo(secondvalue) >= 0 && firstvalue.CompareTo(thirdvalue) > 0 ||
                 firstvalue.CompareTo(secondvalue) > 0 && firstvalue.CompareTo(thirdvalue) >= 0)
             {
-                Console.WriteLine(firstvalue);
+                return firstvalue;
             }
             //TestCase-2
             if (secondvalue.CompareTo(firstvalue) > 0 && secondvalue.CompareTo(thirdvalue) > 0 ||
@@ -43,12 +33,8 @@ namespace GenericMax
             }
             return firstvalue;
         }
-        public T MaxMethod()
-        {
-            T result = Maximum<T>.Number(this.firstvalue, this.secondvalue, this.thirdvalue);
-            return result;
-        }
 
 
     }
 }
+    
