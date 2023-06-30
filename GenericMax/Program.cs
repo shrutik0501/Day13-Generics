@@ -10,19 +10,20 @@ namespace GenericMax
     {
         static void Main(string[] args)
         {
-            Maximum maximum = new Maximum();
+            int num = 6, num_one = 7, num_two = 8;
+            float dec = 3.3f, dec_one = 7.5f, dec_two = 0.7f;
+            string word = "Sai", word_one = "Satya", word_Two = "Zee";
+            Maximum<int> maximum = new Maximum<int>(num, num_one, num_one);
+            int values = maximum.MaxMethod();
+            Console.WriteLine("{0} is the largest", values);
+            Maximum<float> maximum_one = new Maximum<float>(dec, dec_one, dec_two);
+            float values_one = maximum_one.MaxMethod();
+            Console.WriteLine("{0} is the largest", values_one);
+            Maximum<string> maximum_two = new Maximum<string>(word, word_one, word_Two);
+            string values_two = maximum_two.MaxMethod();
+            Console.WriteLine("{0} is the largest", values_two);
 
-            Console.WriteLine("Please Enter the FirstValue:");
-            var val = Console.ReadLine();
-            Console.WriteLine("Please Enter the SecondValue:");
-            var val_one = Console.ReadLine();
-            Console.WriteLine("Please Enter the ThirdValue:");
-            var val_two = Console.ReadLine();
-
-            var Value = maximum.Number(val, val_one, val_two);
-            Console.WriteLine("{0} is greater", Value);
             Console.ReadLine();
         }
     }
 }
-
